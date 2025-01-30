@@ -1,0 +1,39 @@
+1. Bank Account System (OOP + Exception Handling)
+Create a BankAccount class with methods for deposit, withdrawal, and balance inquiry. Throw a custom InsufficientFundsException if withdrawal exceeds the balance. Use encapsulation to protect the balance field.
+Concepts: Classes, methods, encapsulation, custom exceptions.
+
+2. Student Grade Calculator (Arrays + Methods)
+Write a program that accepts 5 subject marks via an array, calculates the average, and prints the grade (A/B/C/D/F) using conditional statements. Handle invalid marks (e.g., negative values) with exceptions.
+Concepts: Arrays, methods, conditionals, exception handling.
+
+3. Library Management System (Collections + OOP)
+Design a Library class using ArrayList<Book> to manage books. Add methods to add/remove books and search by title. Ensure each Book object has a title, author, and ISBN.
+Concepts: ArrayList, classes, methods, encapsulation.
+
+4. Multithreaded Even/Odd Number Generator (Multithreading)
+Create two threads: one prints even numbers and the other prints odd numbers from 1 to 100. Ensure synchronized output to avoid interleaving (e.g., "1, 2, 3, 4...").
+Concepts: Threads, Runnable, synchronization.
+
+5. File Word Counter (File Handling + Collections)
+Read a text file, count the frequency of each word, and store results in a HashMap<String, Integer>. Handle FileNotFoundException and invalid file formats.
+Concepts: File I/O, HashMap, exception handling.
+
+6. Shape Area Calculator (Polymorphism + Inheritance)
+Define an abstract Shape class with an abstract calculateArea() method. Create subclasses Circle and Rectangle that override this method. Store shapes in a list and print their areas.
+Concepts: Inheritance, polymorphism, abstraction, ArrayList.
+
+7. Temperature Converter with Lambda (Lambda Expressions)
+Use lambda expressions to implement temperature conversions (Celsius to Fahrenheit and vice versa). Create a method that accepts a lambda and a temperature value.
+Concepts: Lambda expressions, functional interfaces.
+
+8. Inventory Management (HashMap + Exception Handling)
+Simulate an inventory system using HashMap<String, Integer> where keys are product names and values are quantities. Add methods to restock and sell items. Throw exceptions for invalid products or negative quantities.
+Concepts: HashMap, custom methods, exceptions.
+
+9. Quiz Application with Timer (Multithreading + Collections)
+Build a quiz with 5 MCQ questions stored in an ArrayList. Use a separate thread to enforce a 10-second time limit per question. Terminate the quiz if time runs out.
+Concepts: Threads, ArrayList, loops.
+
+10. Employee Data Persistence (File Handling + OOP)
+Create an Employee class with name, ID, and salary. Write a program to serialize employee objects to a file and deserialize them to display details. Handle IOException.
+Concepts: File I/O, serialization, classes, exceptions.
