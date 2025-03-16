@@ -1,8 +1,84 @@
 
 package housetesting;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
+package thursday;
+/**
+ *
+ * @author sabber
+ */
+public class ThreadGRoupNPrioirty {
+    public static void main(String[] args) {
+        ThreadExtendted thread1 = new ThreadExtendted("task->1");
+         ThreadExtendted thread2 = new ThreadExtendted("task ->2");
+         thread2.setPriority(1);
+         thread1.setPriority(10);
+         thread1.start();
+         thread2.start();
+         
+         
+         //group
+         ThreadGroup group = new ThreadGroup("ThreadGroup::1");
+         ThreadExtendtedWgroup thread4 = new ThreadExtendtedWgroup(group,"task->4");
+         ThreadExtendtedWgroup thread5 = new ThreadExtendtedWgroup(group,"task ->5");
+         ThreadExtendtedWgroup thread6 = new ThreadExtendtedWgroup(group,"task->6");
+         ThreadExtendtedWgroup thread3 = new ThreadExtendtedWgroup(group,"task ->3");
+         
+        thread4.start();
+        thread5.start();
+        thread6.start();
+        thread3.start();
+        
+        System.out.println("Thread Group: " + group.getName());
+        System.out.println("Active threads in the group: " + group.activeCount());
+         
+    }
+}
+
+class ThreadExtendted extends Thread{
+        private String threadname;
+    ThreadExtendted(String name) {
+       
+        this.threadname=name;
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Courrent thread : "+ getThreadname());
+       
+    }
+
+    public String getThreadname() {
+        return threadname;
+    }
+
+    void setThreadGroup(ThreadGroup group) {
+        throw new UnsupportedOperationException("Not supported yet."); 
+    }
+  
+}
+
+class ThreadExtendtedWgroup extends Thread{
+        private String threadname;
+    ThreadExtendtedWgroup(ThreadGroup group,String name) {
+        super(group,name);
+        this.threadname=name;
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Courrent thread : "+ getThreadname());
+       
+    }
+
+    public String getThreadname() {
+        return threadname;
+    }
+
+    void setThreadGroup(ThreadGroup group) {
+        throw new UnsupportedOperationException("Not supported yet."); 
+    }
+  
+}
 
 
 public class HouseTesting {
